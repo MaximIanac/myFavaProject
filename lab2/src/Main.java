@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Formatter;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -6,10 +7,10 @@ public class Main {
         Student[] studentsUnSorted;
 
         studentsSorted = OptionsSorted.readingFIle();
-        studentsUnSorted = OptionsSorted.readingFIle();
+        studentsUnSorted = OptionsUnSorted.readingFIle();
 
-        System.out.println("Sequential Search (UN_SORTED): ");
-        System.out.println(OptionsUnSorted.sequentialSearch(studentsUnSorted, 25));
+        System.out.println("\nSequential Search (UN_SORTED): ");
+        System.out.println(OptionsUnSorted.sequentialSearch(studentsUnSorted, 5));
 
         System.out.println("\nBinary Search (SORTED): ");
         System.out.println(OptionsSorted.binarySearch(studentsSorted, 5));
@@ -24,6 +25,5 @@ public class Main {
         }
         System.out.println("\nBinary tree search:");
         System.out.println(tree.findNodeByID(5));
-
     }
 }
